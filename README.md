@@ -6,5 +6,5 @@ A modification of the NuSoap implementation provided by forguesean. I forked his
 Fork notes
 ==========
 
-All pull requests from original repo merged (july 2016)
+All pull requests from original repo (https://github.com/fergusean/nusoap) merged (july 2016)
 
