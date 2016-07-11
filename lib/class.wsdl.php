@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 /**
 * parses a WSDL file, allows access to it's data, other utility methods.
 * also builds WSDL structures programmatically.
@@ -109,7 +106,7 @@ class wsdl extends nusoap_base {
 		            foreach ($xs->imports as $ns2 => $list2) {
 		                for ($ii = 0; $ii < count($list2); $ii++) {
 		                	if (! $list2[$ii]['loaded']) {
-		                		$this->schemas[$ns][$ns2]->imports[$ns2][$ii]['loaded'] = true;
+		                		$this->schemas[$ns]->imports[$ns2][$ii]['loaded'] = true;
 		                		$url = $list2[$ii]['location'];
 								if ($url != '') {
 									$urlparts = parse_url($url);
@@ -1547,7 +1544,7 @@ class wsdl extends nusoap_base {
 				$rows = sizeof($value);
 				$contents = '';
 				foreach($value as $k => $v) {
-					$this->debug("serializing array element: $k, $v of type: $typeDef[arrayType]");
+					$this->debug("serializing array element: $k, ".json_encode($v)." of type: ".$typeDef['arrayType']);
 					//if (strpos($typeDef['arrayType'], ':') ) {
 					if (!in_array($typeDef['arrayType'],$this->typemap['http://www.w3.org/2001/XMLSchema'])) {
 					    $contents .= $this->serializeType('item', $typeDef['arrayType'], $v, $use);
