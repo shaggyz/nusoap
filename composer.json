@@ -1,8 +1,12 @@
 {
-    "name": "3mg/nusoap",
-    "description": "NuSOAP re-packaged for Packagist/Composer",
+    "name": "seismicmike/nusoap",
+    "description": "NuSOAP re-packaged for Packagist/Composer based on Fergusean with all pull request merged on July 2016.",
     "license": "LGPLv2",
     "authors": [
+        {
+            "name": "Nicolás Daniel Palumbo",
+            "homepage": "http://www.xinax.net"
+        },
         {
             "name": "Dietrich Ayala",
             "homepage": "http://sourceforge.net/u/dietricha/profile/"
@@ -10,6 +14,10 @@
         {
             "name": "Scott Nichol",
             "homepage": "http://sourceforge.net/u/snichol/profile/"
+        },
+        {
+            "name": "Mike Lewis",
+            "e-mail": "seismicmike@gmail.com"
         }
     ],
     "autoload": {
