@@ -141,7 +141,6 @@ class nusoap_base {
      */
     private static $globalDebugLevel = 9;
 
-	private static $globalDebugLevel = 9;
 
     /**
 	* set schema version
