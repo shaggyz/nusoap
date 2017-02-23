@@ -57,6 +57,8 @@ class nusoap_client extends nusoap_base  {
 	var $bindingType = '';			// WSDL operation binding type
 	var $use_curl = false;			// whether to always try to use cURL
 
+    var $wsdlFile = null;
+
 	/*
 	 * fault related variables
 	 */
@@ -303,7 +305,7 @@ class nusoap_client extends nusoap_base  {
 				$this->fault = true;
 				foreach($return as $k => $v){
 					$this->$k = $v;
-					$this->debug("serializing array element: ".json_encode(array("key" => $k,"value" => $v)); 
+					$this->debug("serializing array element: ".json_encode(array("key" => $k,"value" => $v)));
 				}
 				return $return;
 			} elseif ($style == 'document') {
